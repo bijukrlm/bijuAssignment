@@ -1,0 +1,7 @@
+<input id="searchValue" type="text" ng-model="model" placeholder="{{prompt}}" ng-keydown="selected=false" autocomplete="off" required/>
+<a class="search-btn" href="#/searchResults" ng-click="searchResult()" ng-disabled="myForm.$invalid">Search</a>
+<div class="items" ng-hide="!model.length || selected">
+	<div class="item" ng-repeat="item in items | unique:'name' | filter:model  track by $index" ng-click="handleSelection(item[title])" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
+		<p class="title">{{item[title]}}</p>
+	</div>
+</div>

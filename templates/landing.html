@@ -1,0 +1,12 @@
+<div ng-controller="CarouselCtrl" id="slides_control">
+	<div>
+		<uib-carousel interval="myInterval" no-pause="true">
+			<uib-slide ng-repeat="slide in slides" active="active" index="$index">
+				<img ng-src="{{slide.image}}" style="width:1600px" />
+			</uib-slide>
+		</uib-carousel>
+	</div>
+</div>
+<div ng-controller="SearchController" style="position:absolute;top:25%;left:35%">
+	<typeahead items="items" prompt="Start typing an item name" title="name" model="name" on-select="onItemSelected()" />
+</div>

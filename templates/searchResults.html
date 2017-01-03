@@ -1,0 +1,27 @@
+<div class="searched-items">
+	<div style="width:70%">
+		<div class="filter-container"><strong>Filter:</strong>
+			<label><input ng-model="item.gender" type="radio" name="itemfilter" value="" ng-checked="true">All</label>
+			<label><input ng-model="item.gender" type="radio" name="itemfilter" value="men">Men</label>
+			<label><input ng-model="item.gender" type="radio" name="itemfilter" value="women">Women</label>
+			<label><input ng-model="item.gender" type="radio" name="itemfilter" value="kids">Kids</label>
+		</div><br/>
+		<div class="item-holder" ng-repeat="item in items | filter: searchName | filter:item.gender">
+			<div class="shortlist-no" toggle-class="shortlisted"></div>
+			<ul style="list-style-type:none">
+				<li class="title">Name: <a data-id="{{item.id}}" href="#/itemDetails" ng-click="findValue(item.id)">{{item.name}}</a></li>
+				<li class="title">Location: {{item.location}}</li>
+				<li class="title">Price: {{item.price | currency:'&#8377;'}}</li>
+			</ul>
+		</div>
+	</div>
+	<div style="width:30%">
+		<ng-map zoom="4" center="[20.59, 78.96]">
+			<div ng-repeat="item in items | filter: searchName | filter:item.gender">
+				<marker position="{{item.marker_posi}}" title="{{item.name}}"></marker>
+			</div>
+		</ng-map>
+	</div>
+</div>
+
+<!--p>root:{{searchName}}</p-->

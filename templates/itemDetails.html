@@ -1,0 +1,13 @@
+<div class="searchDetails-container" ng-controller="SearchController" class="item-details">
+	<div class="searchDetails-innerContainer">
+		<div class="product-section">
+			<img src="images/{{searchResults[0].name}}.jpg" />
+		</div>
+		<div class="product-section">
+			{{searchResults[0].descri}}
+		</div>
+		<div class="product-section" ng-controller="RatingController as rating">
+			Rating:<star-rating ng-model="rating.itemRating" readonly="rating.isReadonly"></star-rating>
+		</div>
+	</div>
+</div>
