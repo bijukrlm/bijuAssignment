@@ -1,0 +1,128 @@
+
+/*.container{
+	width: 750px;
+	margin:auto;
+	text-align: center;
+	background: #FFF;
+	opacity: 0.95;
+	padding: 40px 10px;
+	border: 1px solid #CCC;
+	box-shadow: 0px 0px 15px #CCC;
+	margin-top: 40px;
+}
+
+h1{
+	color: #C44741;
+}*/
+
+.loading_div{
+	display: block;
+	margin: 10px 0px;
+}
+
+input{
+	padding: 10px;
+	font-size: 22px;
+	margin: 0;
+	border: 1px solid #C44741;
+	outline: none;
+	width: 400px;
+}
+
+.items .item{
+	width: 499px;
+	margin: auto;
+	text-align: left;
+	background: #F2F2F2;
+	padding: 10px;
+	box-shadow: 0px 0px 5px #CCC;
+}
+
+.items .item.title{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.items .subtitle{
+	font-size: 14px;
+	color: #444;
+}
+.items .active{
+	background-color: #C44741;
+	color:#f2f2f2;
+}
+.filter-container input{
+	width:25px
+}
+.filter-container label{
+	font-weight:normal
+}
+
+.star-rating {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  }
+  .star-rating .star {
+    padding: 1px;
+    color: #ddd;
+    font-size: 20px;
+    text-shadow: .05em .05em #aaa;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+	}
+    .star-rating .star.filled {
+      color: #fd0;
+    }
+.shortlist-no{
+	background-image:url(../images/shortlist.png);
+	width:25px;
+	height:25px;
+	position:absolute;
+	right:10px;
+	top:10px;
+	cursor:pointer;
+}
+.shortlisted {
+  background-image:url(../images/shortlist_add.png);
+}
+.searched-items{
+	border:solid 1px red; 
+	width:100%;
+	padding:10px;
+	display:flex
+}
+.item-holder{
+	width:200px;
+	margin-right:10px;
+	margin-bottom:10px;
+	float:left;
+	border:solid 1px blue;
+	padding:10px;
+	position:relative
+}
+.searchDetails-container{
+	width:100%;
+	padding:10px;
+	display:flex
+}
+.searchDetails-innerContainer{
+	width:800px; 
+	margin:auto; 
+	border:solid 1px green
+}
+.product-section{
+	width:350px;
+	margin:auto;
+	border:solid 1px red;
+	text-align:center; 
+	min-height:200px;
+	margin-bottom:10px;
+	margin-top:10px;
+	vertical-align:middle;
+	padding:20px
+}
+.product-section img{
+	margin-top:30px
+}
